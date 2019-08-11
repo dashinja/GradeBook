@@ -6,7 +6,7 @@ namespace GradeBook.Tests
   public class BookTests
   {
     [Fact]
-    public void Test1()
+    public void StatusQuo()
     {
       // arrange section: objects and values
       var book = new Book("", "", "");
