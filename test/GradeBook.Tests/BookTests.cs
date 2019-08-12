@@ -6,7 +6,7 @@ namespace GradeBook.Tests
   public class BookTests
   {
     [Fact]
-    public void statusQuo()
+    public void BookCalculatesAnAverageGrade()
     {
       // arrange section: objects and values
       var book = new Book("", "", "");
@@ -30,9 +30,9 @@ namespace GradeBook.Tests
       var book = new Book("favorite", "Me", "maths");
 
       //act
-      var actualTeacher = book.teacherName;
+      var actualTeacher = book.TeacherName;
       var expectedTeacher = "favorite";
-      var actualStudent = book.studentName;
+      var actualStudent = book.StudentName;
       var expectedStudent = "Me";
 
       //assert
