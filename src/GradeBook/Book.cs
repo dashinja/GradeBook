@@ -35,14 +35,14 @@ namespace GradeBook
       }
     }
 
-    public void clearGrades()
+    public void ClearGrades()
     {
       Grades.Clear();
       Grades.Add(0);
       Console.WriteLine($"Grades cleared for {StudentName}.{lineBreaker}");
     }
 
-    public void listGrades()
+    public void ListGrades()
     {
       string verb = Grades.Count == 1 ? "is" : "are";
       string agreement = Grades.Count == 1 ? "grade" : "grades";
@@ -83,7 +83,7 @@ namespace GradeBook
     {
       if (Grades.Equals(null))
       {
-        this.listGrades();
+        this.ListGrades();
         Console.WriteLine("Yeah, things were null!");
         return null;
       }
@@ -107,9 +107,9 @@ namespace GradeBook
       }
 
     }
-    static public void description()
+    static public void Description()
     {
-      Console.WriteLine($"Description: \nThe class Book is used to create instances of a grade book.\n\nA new instance is instantiated with the foltotal.Lowing syntax:\nvar <variableName> = new Book(<teacherName>, <studentName>, <subjectArea>);\n\nThe methods included are: '.AddGrade()', '.listGrades()' and the method used to invoke this description - '.description()'.{lineBreaker2}");
+      Console.WriteLine($"Description: \nThe class Book is used to create instances of a grade book.\n\nA new instance is instantiated with the following syntax:\nvar <variableName> = new Book(<teacherName>, <studentName>, <subjectArea>);\n\nThe methods included are: '.AddGrade()', '.ClearGrades()', '.GetStatistics()', '.ListGrades()', '.PrintStats()' and the method used to invoke this description - '.Description()'.{lineBreaker2}");
     }
   }
 }

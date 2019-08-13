@@ -16,14 +16,14 @@ namespace GradeBook
       book.AddGrade(40.1);
       book.AddGrade(114.1);
 
-      book.listGrades();
+      book.ListGrades();
       book.PrintStats(book);
 
-      Book.description();
+      Book.Description();
 
-      book.clearGrades();
+      book.ClearGrades();
 
-      book.listGrades();
+      book.ListGrades();
     }
   }
 }

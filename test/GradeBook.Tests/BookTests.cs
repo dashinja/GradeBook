@@ -50,7 +50,7 @@ namespace GradeBook.Tests
       var result = book.PrintStats(book);
 
       //assert
-      Assert.Equal(result, "Printed All");
+      Assert.Equal("Printed All",result);
     }
   }
 }
