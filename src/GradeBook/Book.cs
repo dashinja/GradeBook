@@ -63,20 +63,10 @@ namespace GradeBook
 
     }
 
+    
     public string PrintStats(Book book)
     {
-      var stats = book.GetStatistics();
-
-      Console.WriteLine($"Teacher: {book.TeacherName}");
-      Console.WriteLine($"Student: {book.StudentName}");
-      Console.WriteLine($"Subject: {book.Subject}");
-      Console.WriteLine($"The average grade is: {stats.Average:N2}");
-      Console.WriteLine($"The total.Highest grade is: {stats.High:N2}");
-      Console.WriteLine($"The total.Lowest grade is: {stats.Low:N2}");
-      Console.WriteLine($"Assignments: {book.Grades.Count}");
-      Console.WriteLine($"Total: {stats:N2}.{book.lineBreaker}");
-
-      return "Printed All";
+      return PrintStat.PrintStatistics(book);
     }
 
     public Statistics GetStatistics()
