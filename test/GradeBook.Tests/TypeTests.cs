@@ -19,6 +19,20 @@ namespace GradeBook.Tests
             x = 42;
         }
 
+[Fact]
+
+public void StringsBehaveLikeValueTypes() {
+  //in C# Strings are technically immutable
+  string name = "Byron";
+  var upper = MakeUpperCase(name);
+
+  Assert.Equal("Byron", name);
+  Assert.Equal("BYRON", upper);
+}
+
+private string MakeUpperCase(string parameter){
+  return parameter.ToUpper(); 
+}
         public int GetInt()
         {
             return 3;
