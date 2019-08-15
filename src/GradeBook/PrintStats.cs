@@ -16,7 +16,7 @@ namespace GradeBook
             Console.WriteLine($"The total.Lowest grade is: {stats.Low:N2}");
             Console.WriteLine($"Assignments: {book.Grades.Count}");
             Console.WriteLine($"Total: {stats:N2}.{book.lineBreaker}");
-
+            Console.WriteLine($"The letter grade is {stats.Letter}");
             return "Printed All";
         }
 

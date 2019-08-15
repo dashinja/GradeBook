@@ -144,6 +144,29 @@ public void AddLetterGrade(char letter)
         // }
 
         total.Average = total.Sum / Grades.Count;
+
+        switch (total.Average)
+        {
+            case var d when d >= 90.0:
+            total.Letter = 'A';
+            break;
+
+            case var d when d >= 80.0:
+            total.Letter = 'B';
+            break;
+
+            case var d when d >= 70.0:
+            total.Letter = 'C';
+            break;
+
+            case var d when d >= 60.0:
+            total.Letter = 'D';
+            break;
+
+            default:
+            total.Letter = 'F';
+            break;
+        }
         
         return total;
       }
