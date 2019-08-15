@@ -86,12 +86,27 @@ namespace GradeBook
         total.Low = double.MaxValue;
         total.Sum = 0;
 
-        foreach (var grade in Grades)
+        
+        for (var index = 0; index < Grades.Count; index++)
         {
-          total.High = Math.Max(grade, total.High);
-          total.Low = Math.Min(grade, total.Low);
-          total.Sum += grade;
-        }
+          total.High = Math.Max(Grades[index], total.High);
+          total.Low = Math.Min(Grades[index], total.Low);
+          total.Sum += Grades[index];
+        };
+        // var index = 0;
+        // while(index < Grades.Count)
+        // {
+        //   total.High = Math.Max(Grades[index], total.High);
+        //   total.Low = Math.Min(Grades[index], total.Low);
+        //   total.Sum += Grades[index];
+        //   index+=1;
+        // };
+        // foreach (var grade in Grades)
+        // {
+        //   total.High = Math.Max(grade, total.High);
+        //   total.Low = Math.Min(grade, total.Low);
+        //   total.Sum += grade;
+        // }
 
         total.Average = total.Sum / Grades.Count;
 
