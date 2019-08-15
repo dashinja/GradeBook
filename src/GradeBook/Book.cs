@@ -65,7 +65,7 @@ namespace GradeBook
 
     }
 
-public void AddletterGrade(char letter)
+public void AddLetterGrade(char letter)
 {
   switch (letter)
   {
