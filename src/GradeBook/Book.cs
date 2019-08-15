@@ -22,16 +22,18 @@ namespace GradeBook
       StudentName = studentName;
       Subject = subject;
     }
-    public void AddGrade(double grade)
+    public string AddGrade(double grade)
     {
       if (grade > 100 || grade < 0)
       {
         Console.WriteLine($"You added grade '{grade}'. Grades outside the range 0-100 are not saved.{lineBreaker}");
+        return $"Grades outside the range 0-100 are not saved.";
       }
       else
       {
         Grades.Add(grade);
         Console.WriteLine($"Grade of {grade} added.");
+        return $"Grade added.";
       }
     }
 
