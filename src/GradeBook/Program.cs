@@ -4,26 +4,41 @@ using System.Collections.Generic;
 namespace GradeBook
 {
 
-  class Program
-  {
-    static void Main(string[] args)
+    class Program
     {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("What is the teacher's name for this grade book?");
+            var teacherName = Console.ReadLine();
+            Console.WriteLine("What is the student's name for whom grades will be recorded:");
+            var studentName = Console.ReadLine();
+            Console.WriteLine("For which academic subject are the grades to be entered?");
+            var subjectMatter = Console.ReadLine();
 
-      var book = new Book("Twisdale", "Byron", "Math");
-      book.AddGrade(89.1);
-      book.AddGrade(98.6);
-      book.AddGrade(3.145962);
-      book.AddGrade(40.1);
-      book.AddGrade(114.1);
+            var book = new Book(teacherName, studentName, subjectMatter);
 
-      book.ListGrades();
-      book.PrintStats(book);
 
-      Book.Description();
+            while (true)
+            {
+                Console.WriteLine("Enter student grade - or 'q' to exit.");
+                var grade = Console.ReadLine();
 
-      book.ClearGrades();
+                if (grade == "q")
+                {
+                    break;
+                }
+                
+                book.AddGrade(double.Parse(grade));
+            }
 
-      book.ListGrades();
+            book.ListGrades();
+            book.PrintStats(book);
+
+            Book.Description();
+
+            book.ClearGrades();
+
+            book.ListGrades();
+        }
     }
-  }
 }
