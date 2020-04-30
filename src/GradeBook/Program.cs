@@ -20,7 +20,7 @@ namespace GradeBook
 
       while (true)
       {
-        Console.WriteLine("Enter student grade - or 'q' to exit.");
+        Console.WriteLine("Enter student grade or 'q' to quit.");
         var grade = Console.ReadLine();
 
         if (grade == "q")
